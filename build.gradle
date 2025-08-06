@@ -1,0 +1,41 @@
+plugins {
+    id 'fabric-loom' version '1.6.10'
+}
+
+group = 'com.bobby'
+version = '1.0.0'
+
+java {
+    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
+    withSourcesJar()
+}
+
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
+
+repositories {
+    mavenCentral()
+    maven { url "https://maven.fabricmc.net/" }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:1.20.1"
+    mappings "net.fabricmc:yarn:1.20.1+build.10:v2"
+    modImplementation "net.fabricmc:fabric-loader:0.14.21"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.91.1+1.20.1"
+    modImplementation "net.fabricmc.fabric-api:fabric-screen-api-v1:1.0.38+1.20.1"
+}
+
+loom {
+    mixin {
+        defaultRefmapName = "oldcombat.refmap.json"
+    }
+    runs {
+        client {
+            client()
+            setConfigName("Minecraft Client")
+            ideConfigGenerated(true)
+            runDir("run")
+        }
+    }
+}

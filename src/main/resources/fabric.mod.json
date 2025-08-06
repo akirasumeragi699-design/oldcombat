@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "pvp1.8",
+  "version": "1.0.0",
+  "name": "betterpvp",
+  "description": "1.8 PvP toggle for Minecraft 1.20+",
+  "authors": [
+    "Generated"
+  ],
+  "entrypoints": {
+    "client": [
+      "OldCombat"
+    ]
+  },
+  "mixins": [
+    "oldcombat.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.21",
+    "fabric": "*",
+    "minecraft": ">=1.20",
+    "java": ">=17"
+  }
+}

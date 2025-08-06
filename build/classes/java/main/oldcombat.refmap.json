@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "com/bobby/OldCombat": {
+      "initWidgetsNormal": "Lnet/minecraft/class_442;method_2249(II)V"
+    }
+  },
+  "data": {
+    "named:intermediary": {
+      "com/bobby/OldCombat": {
+        "initWidgetsNormal": "Lnet/minecraft/class_442;method_2249(II)V"
+      }
+    }
+  }
+}
